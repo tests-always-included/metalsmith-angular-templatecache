@@ -1,0 +1,49 @@
+{
+    "name": "metalsmith-angular-templatecache",
+    "version": "1.0.0",
+    "description": "Convert Angular templates from HTML into JavaScript and preload $templateCache.",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "script/test",
+        "watch": "script/watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tests-always-included/metalsmith-angular-templatecache.git"
+    },
+    "keywords": [
+        "metalsmith",
+        "angular",
+        "angularjs",
+        "ng",
+        "template",
+        "templatecache",
+        "plugin",
+        "html2js"
+    ],
+    "author": "Tyler Akins <fidian@rumkin.com>",
+    "contributors": [
+        {
+            "name": "mickel",
+            "email": "andersson.mickel@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tests-always-included/metalsmith-angular-templatecache/issues"
+    },
+    "homepage": "https://github.com/tests-always-included/metalsmith-angular-templatecache#readme",
+    "devDependencies": {
+        "codecov": "~1.0.1",
+        "eslint": "~3.13.1",
+        "istanbul": "~0.4.5",
+        "jasmine": "~2.5.2",
+        "nodemon": "~1.11.0"
+    },
+    "dependencies": {
+        "debug": "~2.6.0",
+        "js-string-escape": "~1.0.0",
+        "minimatch": "~3.0.3",
+        "mustache": "~2.3.0"
+    }
+}
