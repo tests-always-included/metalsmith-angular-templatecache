@@ -158,19 +158,19 @@ This software is licensed under a [MIT license][LICENSE] that contains additiona
 
 
 [AngularJS]: https://angular.io/
-[codecov-badge]: https://img.shields.io/codecov/c/github/tests-always-included/xxxxxx/master.svg
-[codecov-link]: https://codecov.io/github/tests-always-included/xxxxxx?branch=master
-[dependencies-badge]: https://img.shields.io/david/tests-always-included/xxxxxx.svg
-[dependencies-link]: https://david-dm.org/tests-always-included/xxxxxx
-[devdependencies-badge]: https://img.shields.io/david/dev/tests-always-included/xxxxxx.svg
-[devdependencies-link]: https://david-dm.org/tests-always-included/xxxxxx#info=devDependencies
+[codecov-badge]: https://img.shields.io/codecov/c/github/tests-always-included/angular-templatecache/master.svg
+[codecov-link]: https://codecov.io/github/tests-always-included/angular-templatecache?branch=master
+[dependencies-badge]: https://img.shields.io/david/tests-always-included/angular-templatecache.svg
+[dependencies-link]: https://david-dm.org/tests-always-included/angular-templatecache
+[devdependencies-badge]: https://img.shields.io/david/dev/tests-always-included/angular-templatecache.svg
+[devdependencies-link]: https://david-dm.org/tests-always-included/angular-templatecache#info=devDependencies
 [gulp-angular-templatecache]: https://github.com/miickel/gulp-angular-templatecache
 [LICENSE]: LICENSE.md
 [Metalsmith]: http://www.metalsmith.io/
 [metalsmith-move-remove]: https://github.com/carlnordenfelt/metalsmith-move-remove
 [minimatch]: https://github.com/isascs/minimatch
 [npm]: https://npmjs.org/
-[npm-badge]: https://img.shields.io/npm/v/xxxxxx.svg
-[npm-link]: https://npmjs.org/package/xxxxxx
-[travis-badge]: https://img.shields.io/travis/tests-always-included/xxxxxx/master.svg
-[travis-link]: http://travis-ci.org/tests-always-included/xxxxxx
+[npm-badge]: https://img.shields.io/npm/v/angular-templatecache.svg
+[npm-link]: https://npmjs.org/package/angular-templatecache
+[travis-badge]: https://img.shields.io/travis/tests-always-included/angular-templatecache/master.svg
+[travis-link]: http://travis-ci.org/tests-always-included/angular-templatecache

@@ -1,6 +1,6 @@
 {
     "name": "metalsmith-angular-templatecache",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Convert Angular templates from HTML into JavaScript and preload $templateCache.",
     "main": "lib/index.js",
     "scripts": {
