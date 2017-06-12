@@ -1,11 +1,13 @@
 {
     "name": "metalsmith-angular-templatecache",
-    "version": "1.0.1",
+    "version": "1.1.1",
     "description": "Convert Angular templates from HTML into JavaScript and preload $templateCache.",
     "main": "lib/index.js",
     "scripts": {
+        "clean": "rm -rf coverage node_modules/ package-lock.json",
+        "readme": "cp README.pre README.md && jsdoc2md --no-cache -f 'lib/**/*' --global-index-format grouped --property-list-format list --param-list-format list >> README.md && cat README.post >> README.md",
         "test": "script/test",
-        "watch": "script/watch"
+        "watch": "nodemon --exec jasmine"
     },
     "repository": {
         "type": "git",
@@ -34,16 +36,17 @@
     },
     "homepage": "https://github.com/tests-always-included/metalsmith-angular-templatecache#readme",
     "devDependencies": {
-        "codecov": "~1.0.1",
-        "eslint": "~3.13.1",
-        "istanbul": "~0.4.5",
-        "jasmine": "~2.5.2",
-        "nodemon": "~1.11.0"
+        "codecov": "^2.2.0",
+        "eslint": "^4.0.0",
+        "istanbul": "^0.4.5",
+        "jasmine": "^2.6.0",
+        "jasmine-test-helpers": "^1.2.3",
+        "nodemon": "^1.11.0"
     },
     "dependencies": {
-        "debug": "~2.6.0",
-        "js-string-escape": "~1.0.0",
-        "minimatch": "~3.0.3",
-        "mustache": "~2.3.0"
+        "debug": "^2.6.8",
+        "js-string-escape": "^1.0.1",
+        "metalsmith-plugin-kit": "^1.0.1",
+        "mustache": "^2.3.0"
     }
 }

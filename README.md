@@ -151,6 +151,102 @@ The `templateHeader`, `templateBody` and `templateFooter` options control how th
 The JavaScript is assembled by building one header, one body section per included HTML file, then one footer.
 
 
+API
+---
+
+<a name="module_metalsmith-angular-templatecache"></a>
+
+## metalsmith-angular-templatecache
+Metalsmith Angular $templateCache
+
+Populates the `$templateCache` in Angular by converting the HTML templates
+into a single JavaScript file.
+
+
+* [metalsmith-angular-templatecache](#module_metalsmith-angular-templatecache)
+    * [module.exports([options])](#exp_module_metalsmith-angular-templatecache--module.exports) ⇒ <code>function</code> ⏏
+        * [~wrapInModuleSystem(moduleSystem, js)](#module_metalsmith-angular-templatecache--module.exports..wrapInModuleSystem) ⇒ <code>string</code>
+        * [~processFileInfo(options, templateFile)](#module_metalsmith-angular-templatecache--module.exports..processFileInfo)
+        * [~templateFile](#module_metalsmith-angular-templatecache--module.exports..templateFile) : <code>Object</code>
+        * [~options](#module_metalsmith-angular-templatecache--module.exports..options) : <code>Object</code>
+
+<a name="exp_module_metalsmith-angular-templatecache--module.exports"></a>
+
+### module.exports([options]) ⇒ <code>function</code> ⏏
+Factory to build middleware for Metalsmith.
+
+**Kind**: Exported function
+**Params**
+
+- [options] <code>Object</code>
+
+<a name="module_metalsmith-angular-templatecache--module.exports..wrapInModuleSystem"></a>
+
+#### module.exports~wrapInModuleSystem(moduleSystem, js) ⇒ <code>string</code>
+Wraps JavaScript in a given module system's loader.
+
+**Kind**: inner method of [<code>module.exports</code>](#exp_module_metalsmith-angular-templatecache--module.exports)
+**Params**
+
+- moduleSystem <code>string</code>
+- js <code>string</code>
+
+<a name="module_metalsmith-angular-templatecache--module.exports..processFileInfo"></a>
+
+#### module.exports~processFileInfo(options, templateFile)
+Takes a file info object and adds a couple properties.
+
+.content = Buffer from reading the file
+.contentEscaped = File contents as an escaped string (not a Buffer)
+.filename = File's name from Metalsmith
+.uri = Generated from filename and options
+
+**Kind**: inner method of [<code>module.exports</code>](#exp_module_metalsmith-angular-templatecache--module.exports)
+**Params**
+
+- options [<code>options</code>](#module_metalsmith-angular-templatecache--module.exports..options)
+- templateFile [<code>templateFile</code>](#module_metalsmith-angular-templatecache--module.exports..templateFile)
+
+<a name="module_metalsmith-angular-templatecache--module.exports..templateFile"></a>
+
+#### module.exports~templateFile : <code>Object</code>
+A template file, which is typically an HTML file that is to be converted
+into JavaScript.
+
+**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_metalsmith-angular-templatecache--module.exports)
+**Properties**
+
+- content <code>Buffer</code>  
+- contentEscaped <code>string</code> - `.content` converted to a string and escaped for JavaScript.  
+- filename <code>string</code> - Filename from Metalsmith.  
+- uri <code>string</code> - Generated from filename and options.  
+
+<a name="module_metalsmith-angular-templatecache--module.exports..options"></a>
+
+#### module.exports~options : <code>Object</code>
+Options controlling the middleware factory.
+
+**Kind**: inner typedef of [<code>module.exports</code>](#exp_module_metalsmith-angular-templatecache--module.exports)
+**See**: [https://github.com/fidian/metalsmith-plugin-kit](https://github.com/fidian/metalsmith-plugin-kit)  
+**Properties**
+
+- bufferEncoding <code>string</code> - Used when converting file buffers into strings.  
+- destination <code>string</code> - Destination file that will be generated from the HTML templates.  
+- destinationMode <code>string</code> - File permissions for the generated file.  
+- match <code>module:metalsmith-plugin-kit~matchList</code> - Files to match. Defaults to all `*.html` files.  
+- matchOptions <code>module:metalsmith-plugin-kit~matchOptions</code> - Options controlling the matching behavior.  
+- module <code>string</code> - Name of module that should have these templates.  
+- moduleSystem <code>null</code> \| <code>string</code> - What module system to use. Can only be one of `browserify`, `es6`, `iife`, and `requirejs`. When falsy, this does not wrap in any module system.  
+- removeSource <code>boolean</code> - When truthy, the template files are removed from the build.  
+- root= <code>string</code> - Sets the root path to the templates. The path here is prepended to all of the paths of matched files.  
+- standalone <code>boolean</code> - When true, declares the module as a standalone module with no dependencies. Otherwise the module must be declared in other JavaScript.  
+- templateBody <code>string</code> - Controls how templates are added to the template cache. Mustache template.  
+- templateFooter <code>string</code> - How the generated JavaScript finishes. Mustache template.  
+- templateHeader <code>string</code> - How the generated JavaScript starts. Mustache template.  
+- transformUrl <code>function</code> - A function that changes the filename into a URL. The default function does not change the filename at all.  
+
+
+
 License
 -------
 
